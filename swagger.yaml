@@ -1,0 +1,1151 @@
+definitions:
+  gorm.DeletedAt:
+    properties:
+      time:
+        type: string
+      valid:
+        description: Valid is true if Time is not NULL
+        type: boolean
+    type: object
+  models.customer:
+    properties:
+      archived:
+        type: boolean
+      city:
+        type: string
+      createdAt:
+        type: string
+      createdBy:
+        $ref: '#/definitions/models.user'
+      createdByUserID:
+        type: integer
+      deletedAt:
+        $ref: '#/definitions/gorm.DeletedAt'
+      email:
+        type: string
+      firstname:
+        type: string
+      id:
+        type: integer
+      lastname:
+        type: string
+      postcode:
+        type: integer
+      street:
+        type: string
+      streetNr:
+        type: string
+      telephon:
+        type: string
+      updatedAt:
+        type: string
+    type: object
+  models.customerRequest:
+    properties:
+      archived:
+        type: boolean
+      city:
+        type: string
+      createdByUserID:
+        type: integer
+      email:
+        type: string
+      firstname:
+        type: string
+      lastname:
+        type: string
+      postcode:
+        type: integer
+      street:
+        type: string
+      streetNr:
+        type: string
+      telephon:
+        type: string
+    type: object
+  models.customerResponse:
+    properties:
+      archived:
+        type: boolean
+      city:
+        type: string
+      createdAt:
+        type: string
+      createdBy:
+        $ref: '#/definitions/models.user'
+      createdByUserID:
+        type: integer
+      deletedAt:
+        $ref: '#/definitions/gorm.DeletedAt'
+      email:
+        type: string
+      firstname:
+        type: string
+      id:
+        type: integer
+      lastname:
+        type: string
+      postcode:
+        type: integer
+      street:
+        type: string
+      streetNr:
+        type: string
+      telephon:
+        type: string
+      updatedAt:
+        type: string
+    type: object
+  models.deleteMessage:
+    properties:
+      message:
+        type: string
+    type: object
+  models.httpError:
+    properties:
+      error:
+        type: string
+      message:
+        type: string
+    type: object
+  models.report:
+    properties:
+      archived:
+        type: boolean
+      archivedByCustomer:
+        type: boolean
+      createdAt:
+        type: string
+      createdBy:
+        $ref: '#/definitions/models.user'
+      createdByUserID:
+        type: integer
+      customer:
+        $ref: '#/definitions/models.customer'
+      customerID:
+        type: integer
+      date:
+        type: string
+      deletedAt:
+        $ref: '#/definitions/gorm.DeletedAt'
+      description:
+        type: string
+      duration:
+        example: "0"
+        type: string
+      id:
+        type: integer
+      title:
+        type: string
+      updatedAt:
+        type: string
+    type: object
+  models.reportRequest:
+    properties:
+      createdByUserID:
+        type: integer
+      customerID:
+        type: integer
+      date:
+        type: string
+      description:
+        type: string
+      duration:
+        example: "0"
+        type: string
+      title:
+        type: string
+    type: object
+  models.reportResponse:
+    properties:
+      archived:
+        type: boolean
+      archivedByCustomer:
+        type: boolean
+      createdAt:
+        type: string
+      createdBy:
+        $ref: '#/definitions/models.user'
+      createdByUserID:
+        type: integer
+      customer:
+        $ref: '#/definitions/models.customer'
+      customerID:
+        type: integer
+      date:
+        type: string
+      deletedAt:
+        $ref: '#/definitions/gorm.DeletedAt'
+      description:
+        type: string
+      duration:
+        example: "0"
+        type: string
+      id:
+        type: integer
+      title:
+        type: string
+      updatedAt:
+        type: string
+    type: object
+  models.timeTracking:
+    properties:
+      createdAt:
+        type: string
+      createdBy:
+        $ref: '#/definitions/models.user'
+      createdByUserID:
+        type: integer
+      deletedAt:
+        $ref: '#/definitions/gorm.DeletedAt'
+      event:
+        type: string
+      id:
+        type: integer
+      timestamp:
+        type: string
+      updatedAt:
+        type: string
+    type: object
+  models.timeTrackingRequest:
+    properties:
+      createdByUserID:
+        type: integer
+    type: object
+  models.timeTrackingResponse:
+    properties:
+      createdAt:
+        type: string
+      createdBy:
+        $ref: '#/definitions/models.user'
+      createdByUserID:
+        type: integer
+      deletedAt:
+        $ref: '#/definitions/gorm.DeletedAt'
+      event:
+        type: string
+      id:
+        type: integer
+      timestamp:
+        type: string
+      updatedAt:
+        type: string
+    type: object
+  models.user:
+    properties:
+      archived:
+        type: boolean
+      createdAt:
+        type: string
+      deletedAt:
+        $ref: '#/definitions/gorm.DeletedAt'
+      email:
+        type: string
+      firstname:
+        type: string
+      iamUserId:
+        type: string
+      id:
+        type: integer
+      lastname:
+        type: string
+      loginName:
+        type: string
+      role:
+        type: string
+      updatedAt:
+        type: string
+      username:
+        type: string
+    type: object
+  models.userRequest:
+    properties:
+      archived:
+        type: boolean
+      email:
+        type: string
+      firstname:
+        type: string
+      lastname:
+        type: string
+      role:
+        type: string
+      username:
+        type: string
+    type: object
+  models.userResponse:
+    properties:
+      archived:
+        type: boolean
+      createdAt:
+        type: string
+      deletedAt:
+        $ref: '#/definitions/gorm.DeletedAt'
+      email:
+        type: string
+      firstname:
+        type: string
+      iamUserId:
+        type: string
+      id:
+        type: integer
+      lastname:
+        type: string
+      loginName:
+        type: string
+      role:
+        type: string
+      updatedAt:
+        type: string
+      username:
+        type: string
+    type: object
+info:
+  contact:
+    email: develop@upcraft.li
+    name: API Support
+  description: OAuth Login
+  title: Treuhand CRM API
+  version: "1.0"
+paths:
+  /customer:
+    get:
+      consumes:
+        - application/json
+      description: Return all customers
+      produces:
+        - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/models.customerResponse'
+            type: array
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/models.httpError'
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/models.httpError'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/models.httpError'
+      security:
+        - Bearer: []
+      tags:
+        - Customer
+    post:
+      consumes:
+        - application/json
+      description: Create a new customer
+      parameters:
+        - description: CustomerRequest
+          in: body
+          name: CustomerRequest
+          required: true
+          schema:
+            $ref: '#/definitions/models.customerRequest'
+      produces:
+        - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.customerResponse'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/models.httpError'
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/models.httpError'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/models.httpError'
+      security:
+        - Bearer: []
+      tags:
+        - Customer
+  /customer/{id}:
+    delete:
+      consumes:
+        - application/json
+      description: Delete a customer
+      parameters:
+        - description: Id
+          in: path
+          name: id
+          required: true
+          type: number
+      produces:
+        - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.deleteMessage'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/models.httpError'
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/models.httpError'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/models.httpError'
+      security:
+        - Bearer: []
+      tags:
+        - Customer
+    get:
+      consumes:
+        - application/json
+      description: Return specific customer
+      parameters:
+        - description: Id
+          in: path
+          name: id
+          required: true
+          type: number
+      produces:
+        - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.customerResponse'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/models.httpError'
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/models.httpError'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/models.httpError'
+      security:
+        - Bearer: []
+      tags:
+        - Customer
+    put:
+      consumes:
+        - application/json
+      description: Edit an existing customer
+      parameters:
+        - description: Id
+          in: path
+          name: id
+          required: true
+          type: number
+        - description: CustomerRequest
+          in: body
+          name: CustomerRequest
+          required: true
+          schema:
+            $ref: '#/definitions/models.customerRequest'
+      produces:
+        - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.customerResponse'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/models.httpError'
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/models.httpError'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/models.httpError'
+      security:
+        - Bearer: []
+      tags:
+        - Customer
+  /customer/archive/{id}:
+    post:
+      consumes:
+        - application/json
+      description: Change Archiving Customer
+      parameters:
+        - description: Id
+          in: path
+          name: id
+          required: true
+          type: number
+      produces:
+        - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.customerResponse'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/models.httpError'
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/models.httpError'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/models.httpError'
+      security:
+        - Bearer: []
+      tags:
+        - Customer
+  /report:
+    get:
+      consumes:
+        - application/json
+      description: Return all reports
+      produces:
+        - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/models.reportResponse'
+            type: array
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/models.httpError'
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/models.httpError'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/models.httpError'
+      security:
+        - Bearer: []
+      tags:
+        - Report
+    post:
+      consumes:
+        - application/json
+      description: Create a Report
+      parameters:
+        - description: ReportRequest
+          in: body
+          name: ReportRequest
+          required: true
+          schema:
+            $ref: '#/definitions/models.reportRequest'
+      produces:
+        - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.reportResponse'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/models.httpError'
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/models.httpError'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/models.httpError'
+      security:
+        - Bearer: []
+      tags:
+        - Report
+  /report/{id}:
+    delete:
+      consumes:
+        - application/json
+      description: Delete a Report
+      parameters:
+        - description: Id
+          in: path
+          name: id
+          required: true
+          type: number
+      produces:
+        - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.deleteMessage'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/models.httpError'
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/models.httpError'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/models.httpError'
+      security:
+        - Bearer: []
+      tags:
+        - Report
+    get:
+      consumes:
+        - application/json
+      description: Return specific report
+      parameters:
+        - description: Id
+          in: path
+          name: id
+          required: true
+          type: number
+      produces:
+        - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.reportResponse'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/models.httpError'
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/models.httpError'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/models.httpError'
+      security:
+        - Bearer: []
+      tags:
+        - Report
+    put:
+      consumes:
+        - application/json
+      description: Edit an existing report
+      parameters:
+        - description: Id
+          in: path
+          name: id
+          required: true
+          type: number
+        - description: ReportRequest
+          in: body
+          name: ReportRequest
+          required: true
+          schema:
+            $ref: '#/definitions/models.reportRequest'
+      produces:
+        - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.reportResponse'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/models.httpError'
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/models.httpError'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/models.httpError'
+      security:
+        - Bearer: []
+      tags:
+        - Report
+  /report/archive/{id}:
+    post:
+      consumes:
+        - application/json
+      description: Change Archiving Report
+      parameters:
+        - description: Id
+          in: path
+          name: id
+          required: true
+          type: number
+      produces:
+        - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.report'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/models.httpError'
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/models.httpError'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/models.httpError'
+      security:
+        - Bearer: []
+      tags:
+        - Report
+  /time:
+    get:
+      consumes:
+        - application/json
+      description: Return all timestamps (you can also set a filter)
+      produces:
+        - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/models.timeTrackingResponse'
+            type: array
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/models.httpError'
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/models.httpError'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/models.httpError'
+      security:
+        - Bearer: []
+      tags:
+        - Time
+  /time/{id}:
+    delete:
+      consumes:
+        - application/json
+      description: Delete a timestamp
+      parameters:
+        - description: Id
+          in: path
+          name: id
+          required: true
+          type: number
+      produces:
+        - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.deleteMessage'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/models.httpError'
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/models.httpError'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/models.httpError'
+      security:
+        - Bearer: []
+      tags:
+        - Time
+    get:
+      consumes:
+        - application/json
+      description: Get a specific timestamp
+      parameters:
+        - description: Id
+          in: path
+          name: id
+          required: true
+          type: number
+      produces:
+        - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.timeTrackingResponse'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/models.httpError'
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/models.httpError'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/models.httpError'
+      security:
+        - Bearer: []
+      tags:
+        - Time
+    put:
+      consumes:
+        - application/json
+      description: Edit a timestamp
+      parameters:
+        - description: Id
+          in: path
+          name: id
+          required: true
+          type: number
+      produces:
+        - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.timeTrackingResponse'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/models.httpError'
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/models.httpError'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/models.httpError'
+      security:
+        - Bearer: []
+      tags:
+        - Time
+  /time/login:
+    post:
+      consumes:
+        - application/json
+      description: The user logs in
+      produces:
+        - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.timeTracking'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/models.httpError'
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/models.httpError'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/models.httpError'
+      security:
+        - Bearer: []
+      tags:
+        - Time
+  /time/logout:
+    post:
+      consumes:
+        - application/json
+      description: The user logs out
+      produces:
+        - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.timeTracking'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/models.httpError'
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/models.httpError'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/models.httpError'
+      security:
+        - Bearer: []
+      tags:
+        - Time
+  /time/my:
+    get:
+      consumes:
+        - application/json
+      description: Returns all own timestamps
+      parameters:
+        - description: TimeTrackingRequest
+          in: body
+          name: TimeTrackingRequest
+          required: true
+          schema:
+            $ref: '#/definitions/models.timeTrackingRequest'
+      produces:
+        - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/models.timeTrackingResponse'
+            type: array
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/models.httpError'
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/models.httpError'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/models.httpError'
+      security:
+        - Bearer: []
+      tags:
+        - Time
+  /user:
+    get:
+      consumes:
+        - application/json
+      description: Return all users
+      produces:
+        - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/models.userResponse'
+            type: array
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/models.httpError'
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/models.httpError'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/models.httpError'
+      security:
+        - Bearer: []
+      tags:
+        - User
+    post:
+      consumes:
+        - application/json
+      description: Create a new user
+      parameters:
+        - description: UserRequest
+          in: body
+          name: UserRequest
+          required: true
+          schema:
+            $ref: '#/definitions/models.userRequest'
+      produces:
+        - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.userResponse'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/models.httpError'
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/models.httpError'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/models.httpError'
+      security:
+        - Bearer: []
+      tags:
+        - User
+  /user/{id}:
+    delete:
+      consumes:
+        - application/json
+      description: Delete a user
+      parameters:
+        - description: Id
+          in: path
+          name: id
+          required: true
+          type: number
+      produces:
+        - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.deleteMessage'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/models.httpError'
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/models.httpError'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/models.httpError'
+      security:
+        - Bearer: []
+      tags:
+        - User
+    get:
+      consumes:
+        - application/json
+      description: Return specific user
+      parameters:
+        - description: ID
+          in: path
+          name: id
+          required: true
+          type: integer
+      produces:
+        - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.userResponse'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/models.httpError'
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/models.httpError'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/models.httpError'
+      security:
+        - Bearer: []
+      tags:
+        - User
+    put:
+      consumes:
+        - application/json
+      description: Edit an existing user
+      parameters:
+        - description: Id
+          in: path
+          name: id
+          required: true
+          type: number
+        - description: UserRequest
+          in: body
+          name: UserRequest
+          required: true
+          schema:
+            $ref: '#/definitions/models.userRequest'
+      produces:
+        - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.userResponse'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/models.httpError'
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/models.httpError'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/models.httpError'
+      security:
+        - Bearer: []
+      tags:
+        - User
+  /user/archive/{id}:
+    post:
+      consumes:
+        - application/json
+      description: Return specific User
+      parameters:
+        - description: ID
+          in: path
+          name: id
+          required: true
+          type: integer
+      produces:
+        - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.userResponse'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/models.httpError'
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/models.httpError'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/models.httpError'
+      security:
+        - Bearer: []
+      tags:
+        - User
+securityDefinitions:
+  Bearer:
+    in: header
+    name: Authorization
+    type: apiKey
+swagger: "2.0"
