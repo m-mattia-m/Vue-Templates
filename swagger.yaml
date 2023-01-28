@@ -305,7 +305,7 @@ info:
     email: develop@upcraft.li
     name: API Support
   description: OAuth Login
-  title: Treuhand CRM API
+  title: Template-Project API
   version: "1.0"
 paths:
   /customer:

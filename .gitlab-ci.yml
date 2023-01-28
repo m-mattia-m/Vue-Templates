@@ -72,7 +72,7 @@ docker:
     DOCKER_HOST: tcp://docker:2375
     DOCKER_TLS_CERTDIR: ""
     # image
-    IMAGE_URL: "$CI_REGISTRY_IMAGE/treuhand-crm-frontend"
+    IMAGE_URL: "$CI_REGISTRY_IMAGE/template-project-frontend"
     IMAGE_TAG: "$CI_COMMIT_REF_SLUG-$CI_COMMIT_SHORT_SHA"
     IMAGE: "$IMAGE_URL:$IMAGE_TAG"
     IMAGE_LATEST: "$IMAGE_URL:latest"
