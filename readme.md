@@ -25,4 +25,3 @@
   | ❌  | TypeScript-Config             |
   | ❌  | OIDC / Zitadel                |
   | ❌  | Store                         |
-- 
